@@ -27,15 +27,19 @@ export class NewComponent implements OnInit {
   }
 
  
-
+  // firstname=this.fname.value;
+  //  lastname=this.lname.value;
+  //  date=this.dob.value;
+  //  newStudent= new Stud(this.firstname,this.lastname,this.date);
   
-  onSubmit(){
+   onSubmit(){
+     
    const firstname=this.fname.value;
    const lastname=this.lname.value;
    const date=this.dob.value;
    const  newStudent= new Stud(firstname,lastname,date);
-   alert(newStudent.lastname );
-     this.newStudentAdded.emit(newStudent);
-  }
+   alert(newStudent.firstname );
+   this.newStudentAdded.emit(newStudent);
+   }
 
 }

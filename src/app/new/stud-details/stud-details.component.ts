@@ -8,17 +8,20 @@ import { Stud } from '../stud.model';
 })
 export class StudDetailsComponent implements OnInit { 
 
-  // @Input() student: Stud;
+  //  @Input() PData: number;
+  @Input() student: Stud;
  students: Stud[]=[
      new Stud('Smruthi','Jishnu','05-11-1994')
    ];
-
+   
   constructor() { }
 
   ngOnInit() {
   }
-  studAdded(student: Stud){
-   this.students.push(student);
-  }
+  // studAdded(student: Stud){
+    
+  //  this.students.push(student);
+  
+  // }
 
 }
