@@ -13,33 +13,38 @@ export class NewComponent implements OnInit {
   fname= new FormControl('');
   lname= new FormControl('');
   dob= new FormControl('');
+  add=new FormControl('');
+  city=new FormControl('');
+  state=new FormControl(''); 
+  zip=new FormControl('');
+  gender=new FormControl('');
+  
   
 
-  @Output() newStudentAdded= new EventEmitter<Stud>();
+//  @Output() newStudentAdded=new EventEmitter<Stud>();
 
   
   constructor() { }
 
 
   ngOnInit() {
-   this.fname.setValue('Swetha');
-   this.lname.setValue('Jk');
   }
 
- 
-  // firstname=this.fname.value;
-  //  lastname=this.lname.value;
-  //  date=this.dob.value;
-  //  newStudent= new Stud(this.firstname,this.lastname,this.date);
+ newStudent:Stud;
   
    onSubmit(){
-     
-   const firstname=this.fname.value;
-   const lastname=this.lname.value;
-   const date=this.dob.value;
-   const  newStudent= new Stud(firstname,lastname,date);
-   alert(newStudent.firstname );
-   this.newStudentAdded.emit(newStudent);
+    this. newStudent=new Stud(this.fname.value,this.lname.value,this.dob.value,this.add.value,this.city.value,this.state.value,this.zip.value,this.gender.value);
+   }
+   onClear(){
+    this.fname.setValue("");
+    this.lname.setValue("");
+    this.dob.setValue("");
+    this.add.setValue("");
+    this.city.setValue("");
+    this.state.setValue("");
+    this.zip.setValue("");
+    this.gender.setValue("");
+
    }
 
 }

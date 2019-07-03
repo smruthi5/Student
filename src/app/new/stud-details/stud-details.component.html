@@ -1,12 +1,18 @@
 <div class="row">
     <h4>Student Details</h4>
     <div class="row" >
-     <div class="col-xs-4" *ngFor="let student of students">
+     <!-- <div class="col-xs-4" *ngFor="let student of students">
         {{'Name:'}}{{student.firstname}}{{' '+ student.lastname}}<br>
         {{'Date of Birth:'}}{{student.dob}}
-      </div>
-      <div class="col-xs-5" >
-        {{'Name:'}} {{student.firstname}}<br>
+      </div> -->
+      <div class="col-xs-5"  >
+        {{'Name:'}} {{student.firstname}}{{' '+student.lastname}}<br>
+        {{'Date of Birth:'}}{{student.dob}}<br>
+        {{'Address:'}}{{student.address}}<br>
+        {{'City:'}}{{student.city}}<br>
+        {{'State:'}}{{student.state}}<br>
+        {{'Zip:'}}{{student.zip}}<br>
+        {{'Gender:'}}{{student.gender}}<br>
 
       </div>
     </div>

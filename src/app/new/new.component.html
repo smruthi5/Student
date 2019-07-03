@@ -11,27 +11,27 @@
             </div>
             <div class="form-group col-md-6">
               <label>Lastname</label>
-              <input type="text" class="form-control" [formControl]="lname"  id="lname" placeholder="Last name" #lnameInput>
+              <input type="text" class="form-control" [formControl]="lname"  id="lname" placeholder="Last name" required>
             </div>
           </div>
           <div class="form-row">
               <div class="form-group  col-md-6">
                   <label >Date of Birth</label>
-                  <input type="datetime-local" [formControl]="dob"  class="form-control" id="dob"  #dobInput>
+                  <input type="date" [formControl]="dob"  class="form-control" id="dob"  required>
                 </div>
           <div class="form-group  col-md-6">
             <label>Address</label>
-            <input type="text" class="form-control" id="address" >
+            <input type="text" class="form-control" id="address" [formControl]="add" required>
           </div>  
         </div>
           <div class="form-row">
             <div class="form-group col-md-6">
               <label>City</label>
-              <input type="text" class="form-control" id="city">
+              <input type="text" class="form-control" id="city" [formControl]="city">
             </div>
             <div class="form-group col-md-4">
               <label>State</label>
-              <select id="state" class="form-control">
+              <select id="state" class="form-control" [formControl]="state">
                 <option selected>Select</option>
                 <option>Kerala</option>
                 <option>Tamil Nadu</option>
@@ -40,14 +40,14 @@
             </div>
             <div class="form-group col-md-2">
               <label>Zip</label>
-              <input type="text" class="form-control" id="zip">
+              <input type="text" class="form-control" id="zip" [formControl]="zip">
             </div>
           </div>
           <div class="from-row">
-            <div class="form-group col-md-12">
-              <input type="radio" name="gender" value="male" checked> Male
-              <input type="radio" name="gender" value="female"> Female
-              <input type="radio" name="gender" value="other"> Other
+            <div class="form-group col-md-12" >
+              <input type="radio" name="gender" value="Male"  [formControl]="gender" checked> Male
+              <input type="radio" name="gender" value="Female" [formControl]="gender"> Female
+              <input type="radio" name="gender" value="Other" [formControl]="gender"> Other
           </div>
         </div>
         <div class="button button-group">
