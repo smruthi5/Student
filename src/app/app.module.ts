@@ -9,6 +9,13 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
 import { StudDetailsComponent } from './new/stud-details/stud-details.component';
+import { Routes, RouterModule } from '@angular/router';
+import { StudDetailsService } from './new/stud-details.service';
+
+const appRoutes: Routes=[
+   { path: '', component: NewComponent},
+   { path: 'course', component: CourseDetailsComponent}
+];
 
 @NgModule({
   declarations: [
@@ -23,9 +30,10 @@ import { StudDetailsComponent } from './new/stud-details/stud-details.component'
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [StudDetailsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

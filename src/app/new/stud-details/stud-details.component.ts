@@ -1,5 +1,6 @@
 import { Component,  OnInit, Input, ViewChild } from '@angular/core';
 import { Stud } from '../stud.model';
+import { StudDetailsService } from '../stud-details.service';
 
 @Component({
   selector: 'app-stud-details',
@@ -16,14 +17,14 @@ export class StudDetailsComponent implements OnInit {
     //  new Stud('Smruthi','Jishnu','05-11-1994')
    ];
    
-  constructor() { }
+  constructor(private studDetailsService: StudDetailsService) { }
 
   ngOnInit() {
   }
-  studAdded(student: Stud){
-  //   alert(this.student.firstname);
-  //  this.students.push(student);
+  // studAdded(student: Stud){
+  // //   alert(this.student.firstname);
+  // //  this.students.push(student);
   
-  }
+  // }
 
 }
